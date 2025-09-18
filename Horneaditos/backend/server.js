@@ -18,15 +18,15 @@ app.post("/login", async (req, res) => {
     try {
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(401).json({ message: "Usuario no encontrado" });
+            return res.status(401).json({success: false, message: "Usuario no encontrado" });
         }
         const match = await bcrypt.compare(password, user.password);
         if (!match) {
-            return res.status(401).json({ message: "Contraseña incorrecta" });
+            return res.status(401).json({ success: false, message: "Contraseña incorrecta" });
         }
-        res.json({ message: "Login exitoso" });
+        res.json({ success: true, message: "Login exitoso" });
     } catch (error) {
-        res.status(500).json({ message: "Error en el servidor", error });
+        res.status(500).json({success: false, message: "Error en el servidor", error });
     }
 });
 

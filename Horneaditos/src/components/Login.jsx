@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../styles/Login.css";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [mensaje, setMensaje] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,10 +19,12 @@ const Login = () => {
             });
 
             const data = await res.json();
+            console.log(data); 
 
             if (data.success) {
                 setMensaje("Bienvenid@");
                 localStorage.setItem("token", data.token);
+                navigate("/home");
             } else { 
                 setMensaje("Error al ingresar: " + data.message);
                 }
