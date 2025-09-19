@@ -1,22 +1,47 @@
-.homecontainer {
+.homeContainer {
     display: flex;
     height: 100vh;
+    width: 100vw;
 }
 .lateralMenu {
     width: 20%;
-    background-color: #f4f4f4;
+    background-color: #f5f3f3;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     position: fixed;
     height: 100%;
     left: 0;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lateralMenu ul{
+    position: absolute;
+    bottom: 20px;
+    left: 0%;
+}
+.lateralMenu ul li{
+    list-style: none;
 }
 .content {
     margin-left: 20%;
     padding: 20px;
     width: 80%;
-    background-color: #fff;
     overflow-y: auto;
     right: 0;
+}
+.menuButton{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 3px;
+    text-align: left;
+    transition: all 250ms ease-in-out;
+}
+.menuButton:hover {
+    background-color: skyblue;
+    color: #f5f3f3;
 }

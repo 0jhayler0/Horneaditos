@@ -38,6 +38,7 @@ const Home = () => {
   return (
     <div className='homeContainer'> 
         <aside className='lateralMenu'>
+          <i>logotype</i>
           <ul>
             <li><button className='menuButton' onClick={() => setOption("Colaborators")}>Colaboradores</button></li>
             <li><button className='menuButton' onClick={() => setOption("Finances")}>Contabilidad</button></li>
