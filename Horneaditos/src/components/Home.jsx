@@ -7,7 +7,7 @@ import "../styles/Home.css"
 
 const Home = () => {
 
-  const [option, setOption] = useState("Colaborators");
+  const [option, setOption] = useState("");
 
   const greeting = () => {
     const T = new Date().getHours();
