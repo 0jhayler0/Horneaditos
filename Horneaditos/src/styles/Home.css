@@ -1,0 +1,22 @@
+.homecontainer {
+    display: flex;
+    height: 100vh;
+}
+.lateralMenu {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.content {
+    margin-left: 20%;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    overflow-y: auto;
+    right: 0;
+}
